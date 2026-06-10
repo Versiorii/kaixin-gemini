@@ -1,0 +1,46 @@
+{
+  "name": "kaixin-gemini",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:build": "opennextjs-cloudflare build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "build": "next build",
+    "db:local": "wrangler d1 migrations apply kaixin_gemini_db --local",
+    "db:remote": "wrangler d1 migrations apply kaixin_gemini_db --remote"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "latest",
+    "clsx": "latest",
+    "date-fns": "^4.4.0",
+    "lucide-react": "latest",
+    "mermaid": "latest",
+    "next": "15.5.18",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-markdown": "latest",
+    "rehype-highlight": "latest",
+    "remark-gfm": "latest",
+    "swr": "^2.4.1",
+    "tailwind-merge": "latest",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "15.5.18",
+    "postcss": "latest",
+    "tailwindcss": "3.4.17",
+    "typescript": "latest",
+    "wrangler": "latest"
+  }
+}
