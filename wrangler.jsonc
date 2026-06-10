@@ -1,10 +1,28 @@
 {
   "name": "kaixin-gemini",
+  "main": ".open-next/worker.js",
   "compatibility_date": "2026-06-01",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": ".open-next/assets",
-  "vars": { "APP_URL": "http://localhost:3000", "JWT_ISSUER": "kaixin-gemini" },
-  "d1_databases": [{ "binding": "DB", "database_name": "kaixin_gemini_db", "database_id": "YOUR_D1_DATABASE_ID", "migrations_dir": "migrations" }],
-  "kv_namespaces": [{ "binding": "CHAT_KV", "id": "YOUR_KV_NAMESPACE_ID" }],
-  "r2_buckets": [{ "binding": "CHAT_UPLOADS", "bucket_name": "kaixin-gemini-uploads" }]
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "APP_URL": "https://gemini.566622.xyz",
+    "JWT_ISSUER": "kaixin-gemini"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "kaixin_gemini_db",
+    "database_id": "4d174477-a5a3-4d42-9881-5f706889ac29",
+    "migrations_dir": "migrations"
+  }],
+  "kv_namespaces": [{
+    "binding": "CHAT_KV",
+    "id": "765c77ee1d00485193b8392cccd6e405"
+  }],
+  "r2_buckets": [{
+    "binding": "CHAT_UPLOADS",
+    "bucket_name": "kaixin-gemini-uploads"
+  }]
 }

@@ -1,5 +1,10 @@
 -- 插入内置 Prompt 模板
 
+-- 先创建系统用户（内置模板的所有者），满足外键约束
+-- 状态为 disabled，password_hash 为占位符，无法登录
+INSERT OR IGNORE INTO users (id, username, email, password_hash, role, status)
+VALUES ('system', 'System', 'system@kaixin-gemini.local', 'x', 'user', 'disabled');
+
 INSERT INTO prompt_templates (id, user_id, name, description, content, category) VALUES
 -- Code Review 分类
 ('tmpl_code_review_1', 'system', 'Standard Code Review', 'Review code for quality, security, and best practices', 'Please review this code for:
